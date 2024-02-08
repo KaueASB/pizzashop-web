@@ -117,9 +117,7 @@ export function StoreProfileDialog() {
             </Label>
             <Input id="name" className="col-span-3" {...register('name')} />
           </div>
-        {/* </div> */}
 
-        {/* <div className="space-y-4 py-4"> */}
           <div className="grid grid-cols-4 items-center gap-4">
             <Label className="text-right" htmlFor="description">
               Descrição
