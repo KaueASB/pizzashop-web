@@ -47,7 +47,7 @@ export function SignUp() {
           onClick: () => navigate(`/sign-in?email=${data.email}`),
         },
       })
-    } catch (error) {
+    } catch (err) {
       toast.error('Erro ao cadastrar restaurante.')
     }
   }
@@ -71,7 +71,7 @@ export function SignUp() {
             </p>
           </div>
 
-          <form className="space-y-4" onSubmit={handleSubmit(handleSignUp)}>
+          <form onSubmit={handleSubmit(handleSignUp)} className="space-y-4">
             <div className="space-y-2">
               <Label htmlFor="restaurantName">Nome do estabelecimento</Label>
               <Input
@@ -96,21 +96,25 @@ export function SignUp() {
             </div>
 
             <div className="space-y-2">
-              <Label htmlFor="phone">Seu celular</Label>
+              <Label htmlFor="phone">Seu telefone</Label>
               <Input id="phone" type="tel" {...register('phone')} />
             </div>
-            
-            <Button disabled={isSubmitting} className="w-full" type="submit">
+
+            <Button
+              disabled={isSubmitting}
+              className="w-full cursor-pointer select-none"
+              type="submit"
+            >
               Finalizar cadastro
             </Button>
-            
+
             <p className="px-6 text-center text-sm leading-relaxed text-muted-foreground">
-              Ao continuar, você concorda com nossos{' '}
-              <a href="" className="underline underline-offset-4">
+              Ao continuar você concorda com os nossos{' '}
+              <a className="underline underline-offset-4" href="">
                 termos de serviço
               </a>{' '}
               e{' '}
-              <a href="" className="underline underline-offset-4">
+              <a className="underline underline-offset-4" href="">
                 políticas de privacidade
               </a>
             </p>

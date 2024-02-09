@@ -32,21 +32,27 @@ export function SignIn() {
   const { mutateAsync: authenticate } = useMutation({
     mutationFn: signIn,
   })
+
   async function handleSignIn(data: SignInForm) {
     try {
       await authenticate({ email: data.email })
-      toast.success('Enviamos um link de autenticação para seu e-mail.', {
+
+      toast.success('Enviamos um link de autenticação para o seu e-mail.', {
+        actionButtonStyle: {
+          background: 'black',
+          paddingTop: '16px',
+          paddingBottom: '16px',
+        },
         action: {
           label: 'Reenviar',
-          onClick: () => {
-            handleSignIn(data)
-          },
+          onClick: () => handleSignIn(data),
         },
       })
-    } catch (error) {
+    } catch (err) {
       toast.error('Credenciais inválidas.')
     }
   }
+
   return (
     <>
       <Helmet title="Login" />
@@ -60,15 +66,21 @@ export function SignIn() {
               Acessar painel
             </h1>
             <p className="text-sm text-muted-foreground">
-              Acompanhe suas vendas pelo painel do parceiro!
+              Acompanhe suas vendas pelo painel do parceiro
             </p>
           </div>
-          <form className="space-y-4" onSubmit={handleSubmit(handleSignIn)}>
+
+          <form onSubmit={handleSubmit(handleSignIn)} className="space-y-4">
             <div className="space-y-2">
               <Label htmlFor="email">Seu e-mail</Label>
               <Input id="email" type="email" {...register('email')} />
             </div>
-            <Button disabled={isSubmitting} className="w-full" type="submit">
+
+            <Button
+              disabled={isSubmitting}
+              className="w-full cursor-pointer select-none"
+              type="submit"
+            >
               Acessar painel
             </Button>
           </form>
