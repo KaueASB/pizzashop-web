@@ -4,14 +4,14 @@ Dashboard para gestão do estabelecimento e controle de pedidos estilo iFood.
 
 ## Ferramentas
 
-- React
-- React Router DOM
-- React Query
-- Tailwind
-- shadcn/ui
-- Vitest
-- Playwright
-- Mock Service Worker (Mock da API)
+- [React](https://react.dev/)
+- [React Router DOM](https://reactrouter.com/en/main)
+- [Tanstack React Query](https://tanstack.com/query/latest)
+- [Tailwind](https://tailwindcss.com/)
+- [shadcn/ui](https://ui.shadcn.com/)
+- [Vitest](https://vitest.dev/)
+- [Playwright](https://playwright.dev/)
+- [Mock Service Worker (Mock da API)](https://mswjs.io/)
 
 ## Disclaimer
 
