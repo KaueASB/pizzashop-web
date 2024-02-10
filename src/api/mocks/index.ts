@@ -41,11 +41,11 @@ export const worker = setupWorker(
 )
 
 export async function enableMSW() {
-  if (env.MODE !== 'test') {
-    console.log('MODE ENV', env.MODE)
+  // if (env.MODE !== 'test') {
+  console.log('MODE ENV', env.MODE)
 
-    return
-  }
+  // return
+  // }
 
   await worker.start()
 }
