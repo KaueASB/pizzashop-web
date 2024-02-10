@@ -7,12 +7,12 @@ export const getDailyRevenueInPeriodMock = http.get<
   GetDailyRevenueInPeriodResponse
 >('metrics/daily-receipt-in-period', async () => {
   return HttpResponse.json([
-    { date: '01/01/2024', receipt: 2000 },
-    { date: '02/01/2024', receipt: 3000 },
-    { date: '03/01/2024', receipt: 6423 },
-    { date: '04/01/2024', receipt: 200 },
-    { date: '05/01/2024', receipt: 2055 },
-    { date: '06/01/2024', receipt: 890 },
-    { date: '07/01/2024', receipt: 2000 },
+    { date: '01/02/2024', receipt: 2000 },
+    { date: '02/02/2024', receipt: 3000 },
+    { date: '03/02/2024', receipt: 6423 },
+    { date: '04/02/2024', receipt: 200 },
+    { date: '05/02/2024', receipt: 2055 },
+    { date: '06/02/2024', receipt: 890 },
+    { date: '07/02/2024', receipt: 2000 },
   ])
 })
