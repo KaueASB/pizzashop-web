@@ -4,5 +4,11 @@
       "NODE_ENV": "test",
       "MODE": "test"
     }
-  }
+  },
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/"
+    }
+  ]
 }
